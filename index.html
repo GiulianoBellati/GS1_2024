@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.freepik.com/free-vector/cute-blue-whale-cartoon-icon-illustration_138676-2254.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <title>Ocean Care</title>
+    <link rel="stylesheet" href="css\style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Cadastro de viagem <i class="paper plane icon"></i>
+        </h1>
+        <form action="consulta.html" method="get">
+            <label for="destino">Destino:</label>
+            <input type="text" id="destino" name="destino" required>
+
+            <label for="data">Data da Viagem:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="participantes">Número de Participantes:</label>
+            <input type="number" id="participantes" name="participantes" required>
+
+            <label for="tipo">Tipo de Limpeza:</label>
+            <select id="tipo" name="tipo" required>
+                <option value="praia">Praia</option>
+                <option value="mar">Mar</option>
+                <option value="rio">Rio</option>
+            </select>
+            
+            <label for="descricao">Descrição da Atividade:</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+            
+            <button class="ui blue button" type="submit">
+                Cadastrar
+            </button>
+
+            <a class="ui right labeled icon button" href="/consulta.html">
+                <i class="right arrow icon"></i>
+                Consultar viagens
+            </a>
+
+        </form>
+    </div>
+
+</body>
+</html>
