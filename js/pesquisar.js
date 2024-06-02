@@ -6,9 +6,9 @@ document.querySelector(".pesquisa").addEventListener("input", function(event) {
     cardsViagens.forEach(card => {
         const destinoViagem = card.querySelector(".destino").textContent.toLowerCase();
         if (destinoViagem.includes(termoPesquisa) || termoPesquisa === '') {
-            card.style.display = "block"; // Exibir o card se houver correspondência ou se o campo de pesquisa estiver vazio
+            card.style.display = "block";
         } else {
-            card.style.display = "none"; // Ocultar o card se não houver correspondência
+            card.style.display = "none"; 
         }
     });
 });
