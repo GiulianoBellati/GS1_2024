@@ -9,9 +9,9 @@ function card(viagem){
             <div class="card">
                 <div class="content">
                     <div class="header destino">${viagem.destino}</div>
-                    <div class="data">${viagem.data}</div>
+                    <div class="data">Data: ${viagem.data}</div>
                     <div class="participantes">${viagem.participantes} participantes</div>
-                    <div class="tipo">${viagem.tipo}</div>
+                    <div class="tipo">Tipo de limpeza: ${viagem.tipo}</div>
                 </div>
         
                 <button onclick="apagar('${viagem.id}')"  class="ui inverted red button">

@@ -136,7 +136,10 @@ input, select {
 }
 
 .caixa-pesquisa{
-    left: 1300px;
+    display: grid;
+    top: 0px; 
+    right: 0px; 
+    position:absolute;
 }
 
 .data, .participantes, .tipo{
@@ -162,3 +165,4 @@ input, select {
         opacity: 0;
     }
 }
+  
