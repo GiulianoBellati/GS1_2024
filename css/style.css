@@ -1,4 +1,6 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+
+.model-one {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,7 +10,7 @@ body {
     height: 100vh;
 }
 
-body::before{
+.model-one::before{
     content: "";
     position: absolute;
     top: 0;
@@ -22,6 +24,51 @@ body::before{
     z-index: -10;
 }
 
+.model-two{
+    padding: 2rem;
+}
+
+.model-two::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    z-index: -10;
+}
+
+#lista-de-viagens{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 15px;
+}
+
+.home{
+    margin-top: -100px;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.titulo-principal{
+    font-family: Francois One;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    color: #000000;
+}
+
+.btn-opcoes{
+    width: 100%;
+    padding: 30px;
+}
+
 .container {
     width: 100%;
     max-width: 600px;
@@ -31,23 +78,32 @@ body::before{
     border-radius: 5%;
 }
 
-h1 {
+.titulo-form {
+    font-family: Francois One;
+    font-size: 30px;
+    font-weight: 500;
     text-align: center;
     color: #000000;
 }
 
-form {
+.form-cadastrar {
     display: flex;
     flex-direction: column;
 }
 
 label {
+    font-family: Francois One;
+    font-size: 15px;
+    font-weight: 500;
     margin-top: 10px;
     margin-bottom: 5px;
     color: #000000;
 }
 
-input, select, textarea {
+input, select {
+    font-family: Francois One;
+    font-size: 15px;
+    font-weight: 500;
     padding: 10px;
     border: 1px solid #000000;
     border-radius: 5px;
@@ -61,9 +117,48 @@ input, select, textarea {
     margin-right: auto;
 }
 
-.ui.right.labeled.icon.button {
-    margin-top: 50px;
-    width: 200px;
-    margin-left: auto;
-    background-color: #98d6fc;
+.barra-superior{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #98d6fc50;
+    padding: 10px;
+    z-index: 1000; 
+}
+
+.titulo-consultar{
+    font-family: Francois One;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.caixa-pesquisa{
+    left: 1300px;
+}
+
+.data, .participantes, .tipo{
+    font-family: Francois One;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.destino{
+    text-align: center;
+}
+
+.apagando {
+    animation: fadeout 2s;
+}
+
+@keyframes fadeout{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
 }
