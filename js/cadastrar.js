@@ -1,9 +1,9 @@
 document
     .querySelector("#botao-cadastrar")
     .addEventListener("click", (event) => {
-        event.preventDefault()
+        event.preventDefault();
 
-        const form = document.querySelector(".form-cadastrar")
+        const form = document.querySelector(".form-cadastrar");
 
         const destino = form.destino.value.trim();
         const data = form.data.value;
@@ -28,25 +28,24 @@ document
         if (erros.length > 0) {
             erros.unshift('O formulário apresenta a(s) seguinte(s) inconsistência(s):')
             alert(erros.join('\n'));
-        }
-        else {
+        } else {
             const viagem = {
                 id: "id" + new Date().getTime(),
                 destino: form.destino.value,
                 data: formatarData(form.data.value),
                 participantes: form.participantes.value,
                 tipo: formatarTipo(form.tipo.value),
-            }
+            };
 
-            salvar(viagem)
+            salvar(viagem);
         }
-    })
+    });
 
 function formatarData(data) {
-    const date = new Date(data);
-    let dia = date.getDate();
-    let mes = date.getMonth() + 1; 
-    let ano = date.getFullYear();
+    const date = new Date(data + "T00:00:00");
+    let dia = date.getUTCDate();
+    let mes = date.getUTCMonth() + 1; 
+    let ano = date.getUTCFullYear();
 
     dia = dia < 10 ? '0' + dia : dia;
     mes = mes < 10 ? '0' + mes : mes;
@@ -58,10 +57,10 @@ function formatarTipo(palavra) {
     return palavra.charAt(0).toUpperCase() + palavra.substring(1).toLowerCase();
 }
 
-function salvar(viagem){
-    const viagens = JSON.parse(localStorage.getItem("viagens")) || []
-    viagens.push(viagem)
-    localStorage.setItem("viagens", JSON.stringify(viagens))
+function salvar(viagem) {
+    const viagens = JSON.parse(localStorage.getItem("viagens")) || [];
+    viagens.push(viagem);
+    localStorage.setItem("viagens", JSON.stringify(viagens));
 
-    window.location = "index.html"
+    window.location = "index.html";
 }
